@@ -1,0 +1,45 @@
+.catalog-item-card {
+	margin-bottom: 1em;
+ }
+
+.text-center{
+	text-align: center;
+ }
+
+ .catalog-row {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-auto-rows: 1fr;
+	gap: 20px;
+ }
+
+ .col-4 {
+	border: 1px solid #dfdada;
+ }
+
+ .card-body{
+	padding: 100px 20px 10px 20px;
+ }
+.card {
+	position: relative;
+	
+}
+.catalog-image {
+	position: relative;
+	padding-bottom: 85%;
+}
+ .catalog-img-fluid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+ }
+
+ .card-text {
+	font-weight: 500;
+	margin-bottom: 15px;
+ }
+
+ 
