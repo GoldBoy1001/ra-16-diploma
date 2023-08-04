@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6adca378.css",
-    "main.js": "/static/js/main.d23407d6.js",
-    "static/media/banner.jpg": "/static/media/banner.5fd2c60d58a8686daee0.jpg",
-    "static/media/footer-sprite.png": "/static/media/footer-sprite.b3d5697aeb76ce9f8002.png",
-    "index.html": "/index.html",
-    "main.6adca378.css.map": "/static/css/main.6adca378.css.map",
-    "main.d23407d6.js.map": "/static/js/main.d23407d6.js.map"
+    "main.css": "/ra-16-diploma/static/css/main.a6cdef0e.css",
+    "main.js": "/ra-16-diploma/static/js/main.00938c1b.js",
+    "static/media/banner.jpg": "/ra-16-diploma/static/media/banner.5fd2c60d58a8686daee0.jpg",
+    "static/media/footer-sprite.png": "/ra-16-diploma/static/media/footer-sprite.b3d5697aeb76ce9f8002.png",
+    "index.html": "/ra-16-diploma/index.html",
+    "main.a6cdef0e.css.map": "/ra-16-diploma/static/css/main.a6cdef0e.css.map",
+    "main.00938c1b.js.map": "/ra-16-diploma/static/js/main.00938c1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.6adca378.css",
-    "static/js/main.d23407d6.js"
+    "static/css/main.a6cdef0e.css",
+    "static/js/main.00938c1b.js"
   ]
 }
