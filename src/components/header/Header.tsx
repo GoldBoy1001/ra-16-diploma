@@ -1,7 +1,7 @@
 import './styleHeader.css'
 
 import logo from '../../img/header-logo.png'
-import { Link, redirect, useLocation } from 'react-router-dom'
+import { Link, redirect, useLocation, useNavigate } from 'react-router-dom'
 import { useState, useEffect} from 'react'
 import HeaderForm from '../headerForm/HeaderForm'
 import { useTypedSelector } from '../../hook/useTypedSelector'
@@ -12,12 +12,16 @@ export default function Header() {
 	const activeLink = 'nav-link active-header'
 	const normalLink = 'nav-link'
 	const [isClicked, setIsClicked] = useState(false);
+	const navigate = useNavigate()
 
 	const {cart} = useTypedSelector(state => state)
 
   const handleClick = () => {
     setIsClicked(prev => !prev);
   };
+  const navigateClick = () => {
+	navigate(`/cart.html`)
+  }
 
   useEffect(() => {
 		setIsClicked(false)
@@ -53,7 +57,7 @@ return (
 					 data-id="search-expander"
 					  className="header-controls-pic header-controls-search"></div>
 					{/* <!-- Do programmatic navigation on click to /cart.html --> */}
-					<div className="header-controls-pic header-controls-cart">
+					<div onClick={() => cart.length > 0 && navigateClick()} className="header-controls-pic header-controls-cart">
 					  {cart.length > 0 ? <div className="header-controls-cart-full">{cart.length}</div> : ''}
 					  <div className="header-controls-cart-menu"></div>
 					</div>
