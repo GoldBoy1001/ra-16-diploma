@@ -2,7 +2,7 @@
   "name": "ra-diolom",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goldboy1001.github.io/ra-16-diploma/",
+  "homepage": "https://goldboy1001.github.io/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@reduxjs/toolkit": "^1.9.5",
@@ -28,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+	 "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

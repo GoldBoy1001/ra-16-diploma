@@ -5,7 +5,7 @@ import ErrorMessage from '../error/ErrorMeesage'
 import Preload from '../preload/Preload'
 import Button from '../button/Button'
 import CardProduct from '../cardProduct/cardProduct'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Categories from '../categories/Categories'
 import { useProductsQuery } from '../../store/bosaNoga/bosaNoga.api'
 import { useTypedSelector } from '../../hook/useTypedSelector'
@@ -18,13 +18,9 @@ export default function Catalog() {
 	const preload = useTypedSelector((state) => state.preload.addPreload)
 	const catalogLength = useTypedSelector((state) => state.catalogLengt.length)
 	const clickedCategory = useTypedSelector((state) => state.category.isClickedCategory)
-	const removeMore = useTypedSelector(state => state.preload.removeMore)
 	const [more, setMore] = useState(true)
 	const [onMore, setOnMore] = useState(false)
-	const [dataLength, setDataLength] = useState(6)
-	
-	// console.log(removeMore);
-	
+	const navigator =	useNavigate()
 	function moreDel() {
 		setOnMore(false)
 		if (onMore) {
@@ -49,6 +45,11 @@ export default function Catalog() {
 			setMore(false)
 		}
  }
+	useEffect(() => {
+		if(!catalog){
+			navigator('/')
+		}
+	}, [])
 	
 return (
 <div>

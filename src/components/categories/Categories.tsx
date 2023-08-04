@@ -25,6 +25,7 @@ export default function Categories() {
 			fetchCategory(`?categoryId=${item}`)
 			setClickedCategory(item)
 	}
+	console.log(pathname);
 	
 	useEffect(() => {
 			addPreload(isFetching)
@@ -38,6 +39,7 @@ export default function Categories() {
 		 }
 		addItemCatalog(data || [])
 	}, [data])
+	
 	useEffect(() => { 
 			fetchCategory(``);
 			setClickedCategory(' ');
