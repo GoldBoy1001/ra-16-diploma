@@ -1,1 +1,1 @@
-[GitHub Pages](https://skillbox.ru/media/)
+[GitHub Pages](https://goldboy1001.github.io/ra-16-diploma/)
