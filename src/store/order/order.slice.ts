@@ -8,7 +8,8 @@ export const orderSlice = createSlice({
 	initialState,
 	reducers: {
 		addOrder:(state, action:PayloadAction<IProduct>) => {
-			state.push(action.payload)
+			// state.push(action.payload)
+			state.splice(0, state.length, action.payload);
 		},
 		removeOrder:(state, action:PayloadAction<IProduct>) => {
 			const updateState = state.filter(p => p.id !== action.payload.id)

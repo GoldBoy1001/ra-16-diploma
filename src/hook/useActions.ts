@@ -8,6 +8,7 @@ import { categoryAction} from "../store/categories/category.slice"
 import { catalogLengthActions } from "../store/catalogLength/catalogLength.slice"
 import { formTextAction } from "../store/formText/formText.slice"
 import { preloadAction } from "../store/preload/preload.slice"
+import { countActions } from "../store/countProduct/countProduct.slice"
 
 
 
@@ -19,7 +20,8 @@ const AllActions = {
 	...categoryAction,
 	...catalogLengthActions,
 	...formTextAction,
-	...preloadAction
+	...preloadAction,
+	...countActions
 }
 
 

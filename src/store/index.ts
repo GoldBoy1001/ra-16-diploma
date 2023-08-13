@@ -7,6 +7,7 @@ import { categoryReducer } from "./categories/category.slice";
 import { catalogLengthReducer } from "./catalogLength/catalogLength.slice";
 import { formTextReducer } from "./formText/formText.slice";
 import { preloadReducer } from "./preload/preload.slice";
+import { countReducer } from "./countProduct/countProduct.slice";
 
 
 export const store = configureStore({
@@ -18,7 +19,8 @@ export const store = configureStore({
 		category: categoryReducer,
 		catalogLengt: catalogLengthReducer,
 		formText: formTextReducer,
-		preload: preloadReducer
+		preload: preloadReducer,
+		count: countReducer
 	},
 	middleware:(getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(bosaNogaApi.middleware)

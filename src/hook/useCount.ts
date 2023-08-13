@@ -4,6 +4,9 @@ export function useCount(initialValue:number) {
 	const [quantity, setQuantity] = useState(initialValue);
 
 	const increase = () => {
+		if (quantity === 10) {
+			return
+		}
 		setQuantity(quantity + 1);
 	 };
   

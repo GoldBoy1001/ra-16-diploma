@@ -1,9 +1,9 @@
 .justify-content-center {
-	gap: 30px;
-	display: flex;
-	justify-content: center;
- }
- .catalog-categories {
-	font-size: 1.3rem;
-	margin-bottom: 2em;
- }
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+.catalog-categories {
+  font-size: 1.3rem;
+  margin-bottom: 2em;
+}

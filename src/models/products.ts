@@ -8,3 +8,10 @@ export interface IProduct {
 		string
 	]
 }
+export interface IProductCart {
+	id: number,
+	title: string,
+	price: number,
+	count: number,
+	size: string
+}
