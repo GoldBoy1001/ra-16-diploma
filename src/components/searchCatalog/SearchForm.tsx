@@ -12,17 +12,18 @@ export default function SearchForm({
   searchCategory: string;
 }) {
   const { pathname } = useLocation();
-  const [fetchSearchCaregory, { data = [], isError }] = useLazyProductsQuery();
+  const [fetchSearchCaregory, { data, isError }] = useLazyProductsQuery();
   const [search, setSearch] = useState("");
   const debounced = useDebounce(search);
   const { addItemSearch } = useActions();
   const text = useTypedSelector((state) => state.formText.addText);
   const catalog = useTypedSelector((state) => state.catalog);
   const { addText } = useActions();
+  console.log(catalog);
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    if (debounced.trim().length < 3) {
+    if (debounced.trim().length < 2) {
       return;
     }
     fetchSearchCaregory(`?categoryId=${searchCategory}&q=${debounced}`);
@@ -35,6 +36,7 @@ export default function SearchForm({
   useEffect(() => {
     addItemSearch(data || []);
   }, [data]);
+
   useEffect(() => {
     setSearch(text);
   }, [text]);
